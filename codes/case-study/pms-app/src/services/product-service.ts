@@ -1,0 +1,1 @@
+//methods to perform CRUD operations against the product data by sending HTTP request to backend RESTful API server
