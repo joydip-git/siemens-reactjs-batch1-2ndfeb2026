@@ -1,0 +1,12 @@
+https://github.com/joydip-git/siemens-reactjs-batch1-2ndfeb2026
+
+
+React JS:
+-------------------
+function useState<T>(initialState:T){
+	let data = initialState
+	function update(newState:T){
+		data = newState
+	}
+	return [data,update]
+}
