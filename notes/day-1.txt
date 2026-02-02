@@ -17,6 +17,32 @@ React JS:
 12. commenting in JSX {/* */}
 13. to use the component use it like a custom HTML tag (or call the component function)
 
+14. state:
+	a. to re-render a component based on the change of data in the component, you must create a state for the component using "useState" hook API.
+	b. react will track the changes made to the data in the state and accordingly re-render the component by passing the updated data
+	c. useState() hook API returns an array with 2 index positions
+		- copy of the state data in the first index
+		- reference to the method to update the data in the state in the 2nd index
+
+Note:
+	1. state updation is asynchronous and will re-render the component once the asynchronous state updation is over, without blocking the other codes in the component.
+
+	2. rule: never mutate the state directly, rather use the reference to the function, as returned by useState hook, to update the state.
+
+	3. a component can have multiple state. 
+	4. state could be of any type.
+	5. a state is a component's intrinsic part. it can never be shared with any other component.
+
+15. passing data between parent and nested component (props):
+	a. to pass data from a parent to a nested component react uses an object with data and handler functions to be passed through several properties of that object. it is known as props or propery object
+	b. while using JSX syntax where component is used like a custom HTML tag, you can some arbitray custom attributes, which in turn becomes the properties in the property object and carry data and handler
+
+	Note:
+	a. in TS, you need to define a custom type or an interface with desired properties with their data types
+	b. then declare an argument in the component function of that type
+	c. then while usin the component as custom HTML tag use those properties as attributes and bind expected data and handler etc.
+	d. the property object is a readonly type. hence the property values are immutable. any modification of those properties will crash the application
+
 
 
 
