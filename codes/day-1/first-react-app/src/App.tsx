@@ -25,7 +25,7 @@ function App() {
   return (
     <>
       <div id='main' style={style} onClick={
-        (e) => divClickHandler('Welcome to React JS Component State')
+        () => divClickHandler('Welcome to React JS Component State')
       }>
         <span>
           {

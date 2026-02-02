@@ -3,10 +3,35 @@ https://github.com/joydip-git/siemens-reactjs-batch1-2ndfeb2026
 
 React JS:
 -------------------
-function useState<T>(initialState:T){
+1. UI development JS library based on components
+2. helps you create SPA
+3. two packages: react and react-dom
+4. main.tsx/jsx file is the bootstrapper
+5. the render() function of the Root type element in React actually translates the VDOM (a series of React element objects) into HTML DOM (a series of HTML element objects)
+6. a component: a function (or a class) which must return a react node
+7.  a component function name MUST be in camel-casing along with the file name
+8. everything (local data, style and design) should be written in the single component file with extension .jsx or .tsx
+9. design syntax: JSX/TSX (JavaScript and XML)
+10. choose between with or without JSX
+11. binding syntax ({}) to bind data, style and handler functions with any element in JSX
+12. commenting in JSX {/* */}
+13. to use the component use it like a custom HTML tag (or call the component function)
+
+
+
+
+
+
+
+
+
+ function useState<T>(initialState:T){
 	let data = initialState
-	function update(newState:T){
+	async function update(newState:T){
 		data = newState
+	}
+	async function update(callback:(state:T)=>T){
+		data = callback(data)
 	}
 	return [data,update]
 }
