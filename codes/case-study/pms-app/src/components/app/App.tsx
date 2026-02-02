@@ -1,10 +1,13 @@
-import './App.css'
+import ProductList from '../products/product-list/ProductList'
+//import './App.css'
 
-function App() { 
+function App() {
 
   return (
     <>
-      Welcome to React JS
+      <div className='container container-fluid'>
+        <ProductList />
+      </div>
     </>
   )
 }

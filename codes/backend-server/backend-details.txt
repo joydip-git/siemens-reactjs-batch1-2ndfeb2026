@@ -3,11 +3,11 @@ RESTful API description:
 URL					   HTTP method			data			response
 -----------------------------------------------------------------------------------------------------------------------------
 get all products
-http://localhost:3000/products			GET			NA		{ "message":"", "data":[{},{},..]}
+http://localhost:3003/products			GET			NA		{ "message":"", "data":[{},{},..]}
 
 get single product
-http://localhost:3000/products/1		GET			id		{ "message":"", "data": {} }
-http://localhost:3000/products/10		GET			id		{ "message":"", "data": null }
+http://localhost:3003/products/1		GET			id		{ "message":"", "data": {} }
+http://localhost:3003/products/10		GET			id		{ "message":"", "data": null }
 
 add new product
 http://localhost:3000/products			POST			product		{ "message":"", "data":[{},{},..]}
