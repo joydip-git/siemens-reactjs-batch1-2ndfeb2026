@@ -4,7 +4,7 @@
     <div class="container">
         <div class="panel panel-primary">
             <div class="panel-heading fontSize">
-		<!-- display product name here -->
+        <!-- display product name here -->
                 Detail: &nbsp;
                 <a class="btn btn-primary">
                     Edit
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-		<!-- display image -->
+        <!-- display image -->
 
                     <img class="center-block img-responsive" width="200px" src="">
                 </div>
@@ -57,10 +57,27 @@
 </div>
  */
 
+import { useNavigate, useParams } from "react-router-dom"
+
 const ProductDetail = () => {
-  return (
-    <div>ProductDetail</div>
-  )
+
+    //{id:'2', x:'abcd'}
+    const params = useParams()
+    const id = Number(params['id'])
+    const navigate = useNavigate()
+    return (
+        <>
+            <div>ProductDetail: &nbsp; {id}</div>
+            <br />
+            <button type="button" className="btn btn-primary"
+                onClick={
+                    () => navigate(`/products/edit/${id}`)
+                }
+            >
+                Edit
+            </button>
+        </>
+    )
 }
 
 export default ProductDetail

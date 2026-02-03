@@ -37,7 +37,7 @@ const productSlice = createSlice({
 
 export const productReducer = productSlice.reducer
 export const {
-    initiaterequest: initiatSingleReequestActionCreator,
+    initiaterequest: initiatSingleRequestActionCreator,
     fetchsuccess: fetchSingleSuccessActionCreator,
     fetchfailed: fetchSingleFailedActionCreator
 } = productSlice.actions

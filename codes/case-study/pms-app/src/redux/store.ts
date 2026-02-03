@@ -16,4 +16,5 @@ const AppReduxStore = configureStore({
         return getDefaultMiddleware().concat(createLogger())
     },
 })
+export type AppStateType= ReturnType<typeof AppReduxStore.getState>
 export default AppReduxStore

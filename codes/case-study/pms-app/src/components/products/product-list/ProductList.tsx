@@ -8,6 +8,7 @@ import type { AxiosResponse } from "axios"
 import type { ApiResponse } from "../../../models/apiresponse"
 import { useDispatch, useSelector } from "react-redux";
 import { fetchFailedActionCreator, fetchSuccessActionCreator, initiateRequestActionCreator } from "../../../redux/products-slice"
+import type { AppStateType } from "../../../redux/store"
 
 // const ProductList = () => {
 
@@ -87,15 +88,15 @@ const ProductList = () => {
 
     //subscribing to a state from the store
 
-    const subscribedState = useSelector((reducerMap: any) => reducerMap.productsState)
+    const subscribedState = useSelector((reducerMap: AppStateType) => reducerMap.productsState)
     const dispatch = useDispatch()
     const { productRecords, loadingOver, error } = subscribedState
 
     const fetchProducts = async () => {
         //dispatch action for default state -> reset the state
-        const initiateAction = initiateRequestActionCreator()
-        
+        const initiateAction = initiateRequestActionCreator()        
         dispatch(initiateAction)
+
         try {
             const resp: AxiosResponse<ApiResponse<Product[]>> = await getProducts()
             const result: ApiResponse<Product[]> = resp.data
