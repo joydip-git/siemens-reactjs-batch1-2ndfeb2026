@@ -36,13 +36,54 @@ react-router and react-router-dom
 path => 
 component => 
 
-declarative and 
+declarative and progrmmatical
 
 engine:
 -------------
 1. hash router
 2. browser router
 3. memory router
+
+Route component and RouteObject type
+declarative way:
+<Route path="" element={<Comp />} />
+
+programmtical way: 
+const route:RouteObject ={ path:"", element:<Comp/>}
+
+Routes => Route[]
+
+BrowserRouter => register all routes
+
+
+/products/all => ProductList
+/products/view/:id => ProductDetail
+/products/add => AddProduct
+/products/edit/:id => UpdateProduct
+
+/home => Home
+/ => Home (redirection)
+
+* => PageNotFound
+
+
+State Management with Redux
+-------------------------------
+store (object) => collection of states and ****
+	state (object) => an object with properties
+	reducer (function) => a function which controls how to update the current state. produce a new state and return the same to the redux store
+
+action (object) => send to store from a subscribed component with one particular information: what type of action to perform on the state and optionally one more item which is known as payload
+{
+	type: 'increase',
+	payload: 2
+}
+
+dispatch() => a method to send action object from component to store (supplied by store)
+
+
+
+
 
 
 
