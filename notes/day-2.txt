@@ -82,7 +82,14 @@ action (object) => send to store from a subscribed component with one particular
 dispatch() => a method to send action object from component to store (supplied by store)
 
 
+working with react and redux:
+----------------------------------
+for redux store etc. => Redux JS toolkit
 
+>npm i @reduxjs/toolkit
+
+use redux store from react app => react-redux
+>npm i react-redux
 
 
 

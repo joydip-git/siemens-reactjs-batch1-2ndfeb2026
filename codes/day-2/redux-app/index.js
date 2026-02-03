@@ -1,14 +1,17 @@
 const { legacy_createStore } = require("redux");
 
+//initial state
 const initialCounterState = {
   counter: 0,
 };
 
+//action types
 const actionTypes = {
   INCREASE: "INCREASE",
   DECREASE: "DECREASE",
 };
 
+//action creator functions
 const increaseActionCreator = (data = 1) => {
   return {
     type: actionTypes.INCREASE,
@@ -23,6 +26,7 @@ const decreaseActionCreator = (data = 1) => {
   };
 };
 
+//reducer
 const counterReducer = (prevState = initialCounterState, action) => {
   switch (action.type) {
     case actionTypes.INCREASE:
@@ -44,14 +48,17 @@ const counterReducer = (prevState = initialCounterState, action) => {
   }
 };
 
+//store
 const store = legacy_createStore(counterReducer);
+
+
+//subscriber code
 console.log(store.getState());
 
 const increaseByTwoAction = increaseActionCreator(2);
 store.dispatch(increaseByTwoAction);
-
 console.log(store.getState());
+
 const decreaseByOneAction = decreaseActionCreator(1);
 store.dispatch(decreaseByOneAction);
-
 console.log(store.getState());
