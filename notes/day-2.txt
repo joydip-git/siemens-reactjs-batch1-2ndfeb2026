@@ -1,0 +1,52 @@
+sending HTTP requests using axios or fetch() API of DOM
+
+component lifecycle
+	effect hook: useEffect()
+	
+	useEffect(
+		//effect function
+		
+		()=>{ 
+			//effect code
+
+			return () =>{ 
+				//clean up code
+			}
+		},
+
+		[] <- dependency list (optional)
+	)
+
+	1. no dependency list	=> effect code will be executed always
+	2. dependency list with dependencies => effect code will be executed ONLY when any of the dependency factor's value changes
+	3. a blank dependency list => effect code will be executed ONLY once (after mounting) until the component is unmounted
+	4. if you have all versions of the useEffect(), all of the effect codes will run very first time
+	5. all cleanup codes will run from the second cycle (render) onwards for any component and they will run before the effect code
+	6. no dependency list	=> clean-up code will be executed always (2nd render onwards at the beginning)
+	7. dependency list with dependencies => clean-up code code will be executed ONLY when any of the dependency factor's value changes, but from next cycle, at the beginning
+	8. a blank dependency list => clean-up code will be executed ONLY once when the component is unmounted
+
+
+
+routing in React JS:
+--------------------------
+react-router and react-router-dom 
+>npm i react-router-dom@6.30.3
+
+path => 
+component => 
+
+declarative and 
+
+engine:
+-------------
+1. hash router
+2. browser router
+3. memory router
+
+
+
+
+
+
+

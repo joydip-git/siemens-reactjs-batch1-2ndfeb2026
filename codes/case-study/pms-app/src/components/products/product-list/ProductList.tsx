@@ -1,4 +1,4 @@
-import { Component, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import type { Product } from "../../../models/product"
 //import { products } from "../../../data/products"
 import './ProductList.css'
@@ -16,7 +16,7 @@ const ProductList = () => {
 
     const fetchProducts = async () => {
         try {
-            const resp: AxiosResponse<ApiResponse<Product[]>> = await getProducts()
+            const resp: AxiosResponse<ApiResponse<Product[]>> = await getProducts()            
             const result: ApiResponse<Product[]> = resp.data
             if (result.data !== null) {
                 setProductRecords(result.data)
@@ -27,7 +27,7 @@ const ProductList = () => {
                 setLoadingOver(true)
                 setError(result.message)
             }
-        } catch (err: any) {
+        } catch (err:any) {
             setProductRecords([])
             setLoadingOver(true)
             setError(err.message)
@@ -35,9 +35,10 @@ const ProductList = () => {
     }
 
     useEffect(
-        () => {
+        () => {           
             fetchProducts()
         },
+        []
     )
     if (loadingOver) {
         if (error === '') {

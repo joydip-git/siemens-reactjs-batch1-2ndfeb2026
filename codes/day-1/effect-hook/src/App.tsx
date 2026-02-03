@@ -6,6 +6,7 @@ const App = () => {
 
   const [counter, setCounter] = useState(0)
   const [nameValue, setNameValue] = useState('')
+  
   const [show, setShow] = useState(true)
 
   const increaseHandler = () => {
